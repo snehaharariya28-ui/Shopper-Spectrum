@@ -5,7 +5,7 @@
 
 > An end-to-end e-commerce analytics dashboard that segments customers using RFM analysis and KMeans clustering, and recommends similar products using item-based collaborative filtering — built with Python and Streamlit.
 
----
+
 
 ## 🔗 Live Demo
 
