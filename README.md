@@ -5,29 +5,33 @@
 
 > An end-to-end e-commerce analytics dashboard that segments customers using RFM analysis and KMeans clustering, and recommends similar products using item-based collaborative filtering — built with Python and Streamlit.
 
----
+
 
 ## 🔗 Live Demo
 
 **Streamlit App:** https://shopper-spectrum-2fjgeniqhcqeklusjabkfc.streamlit.app
 
-**GitHub Repository:** https://github.com/snehaharariya28-ui/Shopper-Spectrum
 
----
 
-## 📌 About the Project
+##  About the Project
 
-Shopper Spectrum is a data analytics project built as part of the **Labmentix Data Analytics Internship**. The goal of this project is to analyze transaction data from an online retail business, understand customer purchase behavior, segment customers into meaningful groups, and build a product recommendation system.
+Shopper Spectrum is an end-to-end e-commerce analytics dashboard built on real-world retail transaction data from a UK-based online retail store, containing over 5 lakh transactions from customers across 37 countries.
+
+The e-commerce industry generates massive amounts of transaction data every day. Most businesses collect this data but fail to extract meaningful insights from it. Shopper Spectrum bridges that gap — transforming raw transaction records into actionable customer intelligence and personalized product recommendations.
 
 The project addresses two core business problems:
 
-1. **Who are our customers?** — By segmenting customers based on their purchase behavior using RFM analysis and KMeans clustering into four actionable groups: High-Value, Regular, Occasional, and At-Risk.
+**1. Who are our customers?**
+Customers are segmented based on their purchase behavior using RFM (Recency, Frequency, Monetary) analysis combined with KMeans clustering — classifying every customer into one of four actionable groups: High-Value, Regular, Occasional, and At-Risk. Each segment comes with a clear business interpretation and recommended action.
 
-2. **What should we recommend?** — By building an item-based collaborative filtering recommendation system that suggests 5 similar products for any given product, based on purchase history patterns.
+**2. What should we recommend?**
+An item-based collaborative filtering recommendation system suggests 5 similar products for any given product — powered by cosine similarity computed on a customer-product purchase matrix. The system learns from actual purchase patterns, not product descriptions or categories.
 
----
+Together, these two systems enable businesses to run targeted marketing campaigns, improve customer retention, and drive personalized shopping experiences at scale.
 
-## 📂 Dataset
+
+
+## Dataset
 
 **Name:** Online Retail Dataset
 
@@ -36,7 +40,7 @@ The project addresses two core business problems:
 **About the dataset:**
 The original dataset contains transactional data from a UK-based online retail store. It covers all transactions between December 2010 and December 2011. The dataset was originally donated to the UCI Machine Learning Repository and is widely used for e-commerce analytics and customer segmentation research.
 
-**Note:** For this internship project, the dataset was provided by **Labmentix** with the transaction dates modified to the period **December 2022 to December 2023** to simulate a more recent business scenario. The structure, columns, and content of the data remain the same as the original UCI dataset.
+**Note:** This project was completed as part of a Data Analytics Internship. The dataset was provided with transaction dates modified to the period December 2022 to December 2023 to simulate a more recent business scenario. The structure, columns, and content of the data remain the same as the original UCI dataset.
 
 **Dataset Details:**
 
@@ -55,9 +59,9 @@ The original dataset contains transactional data from a UK-based online retail s
 
 **After Cleaning:** 3,97,884 valid transactions
 
----
 
-## 🧹 Data Cleaning
+
+## Data Cleaning
 
 The following steps were applied to clean the raw data:
 
@@ -68,9 +72,9 @@ The following steps were applied to clean the raw data:
 - Removed rows with missing **product Description**
 - Engineered a new column: **TotalPrice = Quantity × UnitPrice**
 
----
 
-## 🧠 Methodology
+
+## Methodology
 
 ### 1. RFM Feature Engineering
 
@@ -101,9 +105,9 @@ For each customer, three values were calculated:
 - For each product, the **top 20 most similar products** are stored
 - Two products are considered similar if the same customers frequently buy both
 
----
 
-## 📊 Key Insights
+
+## Key Insights
 
 - Total Revenue: **£8,911,408** across 18,532 transactions
 - **United Kingdom** accounts for ~82% of total revenue (£7.3 million)
@@ -113,9 +117,9 @@ For each customer, three values were calculated:
 - **Occasional segment** is the largest group (3,054 customers, 46.6% of revenue)
 - **1,067 At-Risk customers** represent over £5 lakh in recoverable revenue
 
----
 
-## 📱 Streamlit Application — Pages
+
+## Streamlit Application — Pages
 
 | Page | Description |
 |---|---|
@@ -130,9 +134,9 @@ For each customer, three values were calculated:
 | Predict Segment | Input RFM values → get predicted customer segment |
 | Business Insights | Key findings and revenue contribution by segment |
 
----
 
-## 🛠 Tech Stack
+
+## Tech Stack
 
 | Tool | Purpose |
 |---|---|
@@ -143,7 +147,7 @@ For each customer, three values were calculated:
 | Streamlit | Web application framework |
 | Pickle | Saving and loading trained models |
 
----
+
 
 ## ⚙️ Setup Instructions
 
@@ -162,9 +166,9 @@ python preprocessing.py
 streamlit run app.py
 ```
 
----
 
-## 📁 Project Structure
+
+##  Project Structure
 
 ```
 shopper_spectrum/
@@ -187,12 +191,3 @@ shopper_spectrum/
 ├── .gitignore
 └── README.md
 ```
-
----
-
-## 👩‍💻 Author
-
-**Sneha Harariya**
-Data Analytics Intern — Labmentix
-GitHub: [github.com/snehaharariya28](https://github.com/snehaharariya28)
-LinkedIn: [linkedin.com/in/sneha-harariya](https://linkedin.com/in/sneha-harariya)
