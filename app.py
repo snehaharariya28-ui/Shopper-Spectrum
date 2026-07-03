@@ -475,7 +475,8 @@ elif PAGE == "Customer Segmentation":
         fig = px.pie(seg_counts, names="Segment", values="Count",
                      color="Segment", color_discrete_map=SEG_COLORS,
                      hole=0.45)
-        fig.update_traces(textinfo="label+percent", textfont_size=13)
+        fig.update_traces(textinfo="percent", textfont_size=11, textposition="inside")
+        fig.update_layout(showlegend=True)
         fig.update_layout(title=dict(text="Segment Distribution", font=dict(color="#1C1C1E", size=14)), showlegend=False)
         fig_layout(fig, height=360, legend=False)
         st.plotly_chart(fig, use_container_width=True)
